@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray;
+    background-color: #d3d3d3;
 }
 
 .App {
@@ -7,4 +7,5 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 97%;
 }
