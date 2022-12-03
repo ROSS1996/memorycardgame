@@ -1,25 +1,34 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import Scoreboard from "./Scoreboard";
+import Game from "./Game";
+
+import "./app.css"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [streak, setStreak] = useState(0);
+  const [best, setBest] = useState(0);
+
+  function changeStreak(increase) {
+    if (increase === true) {
+      setStreak(streak + 1);
+    } else {
+      checkBest()
+      setStreak(0);
+    }
+  }
+
+  function checkBest() {
+    if (streak > best) {
+      setBest(streak);
+    }
+  }
 
   return (
     <div className="App">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Scoreboard currentStreak={streak} bestStreak={best} />
+      <Game changeStreak={changeStreak} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

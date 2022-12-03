@@ -1,0 +1,23 @@
+#quadrados {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    width: 1050px;
+}
+
+.quadrado {
+    width: 200px;
+    height: 250px;
+    border: 1px dashed lightsalmon;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: greenyellow;
+}
