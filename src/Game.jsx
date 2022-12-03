@@ -4,7 +4,7 @@ import "./game.css";
 
 
 function Square (props) {
-  let image = "../public/images/" + props.squareID + ".jpg"
+  let image = "../public/" + props.squareID + ".jpg"
   return <div className="square" id={props.squareID} onClick={props.clickHandler} style={{
     backgroundImage: "url(" + image + ")",
     backgroundPosition: 'center',
